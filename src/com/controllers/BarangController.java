@@ -12,6 +12,7 @@ public class BarangController {
     private List<Barang> listBarang;
     static Scanner scan = new Scanner(System.in);
 
+    // ini adalah konstruktor unutk BarangController
     public BarangController(List<Barang> listBarang) {
         this.listBarang = listBarang;
         menuBarang();

@@ -17,6 +17,7 @@ public class App {
     public static final Locale locale = new Locale("in", "ID");
 
     public static void main(String[] args) throws Exception {
+        // 1 buat model terlebih dahulu agar bisa digunakan di dalam arraylist
         List<Barang> listBarang = new ArrayList<Barang>();
         List<Transaksi> listTransaksi = new ArrayList<Transaksi>();
 
@@ -32,17 +33,23 @@ public class App {
 
     public static int showMenu(List<Barang> lBarangs, List<Transaksi> lTransaksis) {
         int selectedMenu = Utility.inputInt(scan.nextLine());
+
         switch (selectedMenu) {
             case 1:
+                // 2 buat folder controller kemudian bikin nama untuk controllernya
+                // 3 bikin contructor
                 new BarangController(lBarangs);
                 break;
+
             case 2:
+                // tambahkan class tranksaiCOntroller di dalam package controller
                 new TransaksiController(lTransaksis, lBarangs);
 
             case 3:
                 new LaporanTransaksiController(lTransaksis);
                 break;
         }
+
         return selectedMenu;
     }
 }
