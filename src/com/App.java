@@ -18,6 +18,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         // 1 buat model terlebih dahulu agar bisa digunakan di dalam arraylist
+        //ini adalah merek xapp
         List<Barang> listBarang = new ArrayList<Barang>();
         List<Transaksi> listTransaksi = new ArrayList<Transaksi>();
 
